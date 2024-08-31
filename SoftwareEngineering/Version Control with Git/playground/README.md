@@ -3,4 +3,4 @@ This is a playground for the lab from the Git Branching and Pull Requests lesson
 
 ## Make your changes here:
 Exercising GIT commands.
-git init, pull, add ., commit -m, push - done.
+git init, pull, add ., commit -m, push.
