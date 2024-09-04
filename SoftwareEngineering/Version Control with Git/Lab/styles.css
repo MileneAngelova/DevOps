@@ -1,0 +1,150 @@
+body {
+    background-color: rgb(238, 238, 238) ;
+    margin-left: 7%;
+    margin-right: 7%;
+    font-family: Helvetica,sans-serif;
+    line-height: 1.4rem;
+}
+
+header h1, section h3 {
+    font-family: Georgia, serif;
+    font-weight: 500;
+}
+
+header, header p, .first nav, .first ul, .first li, main, article, section {
+display: inline-block;
+}
+
+.first a, .first nav ul li {
+    color: rgb(0, 102, 0) ;
+    padding: 20px;
+}
+
+.first {
+    width: 100%;
+    position: relative;
+}
+
+.first p {
+    padding-top: 40px;
+    font-size: 30px;
+    font-family: Helvetica;
+    font-weight: 600;
+    margin-bottom: 17px;
+}
+
+nav {
+    position: absolute;
+    margin-left: 57%;
+    top: 15px;
+}
+
+hr {
+    border: 2px solid;
+    margin-top: -5px;
+}
+
+.escalator {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    margin-left: 39%;
+    margin-top: -13%;
+    box-shadow: 1px 10px 30px 1px rgb(0 0 0 / 25%);
+    border: 10px solid black;
+    border-style: double;
+    width: 170px;
+}
+
+blockquote {
+    font-family: Georgia, serif;
+    line-height: 32px;
+    border-left: 4px solid rgb(221,221,221);
+    display: inline-block;
+    width: 329px;
+    padding-left: 35px;
+    height: 203px;
+    font-style: italic;
+}
+
+.bloquote {
+    display: inline-block;
+    width: 385px;
+}
+
+blockquote p {
+    text-align: end;
+}
+
+.middle {
+    width: 814px;
+}
+
+.heading {
+    width: 583px;
+}
+
+.end {
+    position: relative;
+    width: 561px;
+    display: inline-block;
+    padding-left: 20px;
+    top: -43px;
+}
+
+.last {
+    position: relative;
+    width: 824px;
+    display: inline-block;
+    padding-left: 0;
+    top: -20px;
+}
+
+img {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 10px 30px 1px rgb(0 0 0 / 25%);
+    border: 10px double black;
+}
+
+a {
+    text-decoration: none;
+    padding: 0;
+    color: rgb(0, 102, 0) ;
+}
+
+.categorie {
+    position: absolute;
+    margin-left: 28px;
+    display: block;
+}
+
+.social {
+    position: absolute;
+    margin-left: 28px;
+    margin-top: 175px;
+}
+
+aside {
+    position: absolute;
+    margin-left: 61%;
+}
+
+.aside ul li {
+    width: 120px;
+}
+
+.categorie ul {
+    padding: 25px;
+    margin-left: -42px;
+}
+
+.social ul {
+    padding: 25px;
+    margin-left: -22px;
+}
+
+.aside nav {
+    position: absolute;
+    margin-left: 75%;
+    top: 12px;
+}
+
