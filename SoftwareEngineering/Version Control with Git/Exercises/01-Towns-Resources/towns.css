@@ -53,7 +53,7 @@ article>button:hover {
 }
 
 button#btnDelete {
-	background: darkred;
+	background: red;
 }
 
 #result {
