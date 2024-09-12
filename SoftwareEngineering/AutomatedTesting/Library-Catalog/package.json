@@ -5,10 +5,10 @@
     "main": "index.html",
     "scripts": {
         "test": "mocha tests",
-        "start": "http-server -a localhost -p 3000 -P http://localhost:3000? -c-1",
+        "test:ui": "npx playwright test tests/ui.test.js",
+        "start": "concurrently \"npm run start-be\" \"npm run start-fe\"",
         "start-fe": "http-server -a localhost -p 3000 -P http://localhost:3000? -c-1",
         "start-be": "cd server && node server.js"
-
     },
     "author": "",
     "license": "ISC",
@@ -17,9 +17,11 @@
         "page": "^1.11.6"
     },
     "devDependencies": {
+        "@playwright/test": "^1.47.0",
+        "chai": "4.3.4",
+        "concurrently": "9.0.1",
         "http-server": "0.12.3",
-        "playwright-chromium": "1.9.2",
         "mocha": "8.3.2",
-        "chai": "4.3.4"
+        "playwright-chromium": "1.9.2"
     }
 }
