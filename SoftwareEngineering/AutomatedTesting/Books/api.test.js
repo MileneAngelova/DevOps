@@ -3,18 +3,16 @@ const chaiHttp = require('chai-http');
 const server = require('./server');
 const { describe } = require('mocha');
 const expect = chai.expect;
-<<<<<<< HEAD
 
-chai.use(chaiHttp);
-
-describe('Books', () => {
-    letbookId;
-=======
 chai.use(chaiHttp);
 
 describe('Books', () => {
     let bookId;
->>>>>>> add-tests
+
+chai.use(chaiHttp);
+
+describe('Books', () => {
+    let bookId;
     it('should POST a book', (done) => {
         const book = {id: "1", title: "Test Book", author: "Test Author"}
         chai.request(server)
@@ -26,13 +24,9 @@ describe('Books', () => {
             expect(res.body).to.have.property('id');
             expect(res.body).to.have.property('title');
             expect(res.body).to.have.property('author');
-            book.id = res.body.id;
-<<<<<<< HEAD
+            bookId = res.body.id;
             done;
-=======
-            console.log('response: ', res.body);
-            done();
->>>>>>> add-tests
-        })
-    })
+        });
+    });
+});
 });
