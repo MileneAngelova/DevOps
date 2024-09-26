@@ -23,7 +23,7 @@ describe('Books', () => {
                 expect(res.body).to.have.property('author');
                 bookId = res.body.id;
                 console.log('response: ', res.body)
-                done;
+                done();
             });
     });
 
@@ -38,9 +38,9 @@ describe('Books', () => {
     });
 
     it('should GET a single book', (done) => {
-        let bookId = 1;
+        
         chai.request(server)
-            .get('/books/${bookId}')
+            .get('/books/1')
             .end((err, res) => {
                 expect(res).to.have.status(200);
                 expect(res.body).to.be.a('object');
@@ -52,10 +52,10 @@ describe('Books', () => {
     });
     
     it('should PUT an existing book', (done) => {
-        let bookId = 2;
+       
         const updatedBook = {id: bookId, title: "Updated Title", author: "Updated Author"}
         chai.request(server)
-            .put('/books/${bookId}')
+            .put('/books/1')
             .send(updatedBook)
             .end((err, res) => {
                 expect(res).to.have.status(200);
@@ -68,10 +68,9 @@ describe('Books', () => {
     });
 
     it('should DELETE an existing book', (done) => {
-        let bookId = 2;
         const bookToDelete = {id: bookId, title: "Updated Title", author: "Updated Author"}
         chai.request(server)
-            .delete('/books/${bookId}')
+            .delete('/books/1')
             .send(bookToDelete)
             .end((err, res) => {
                 expect(res).to.have.status(204);
@@ -80,16 +79,14 @@ describe('Books', () => {
     });
 
     it('should return 404 when trying to GET, PUT or DELETE a non-existing book', (done) => {
-        let bookId = 999;
-
         chai.request(server)
-        .get('/books/${bookId}')
+        .get('/books/999')
         .end((err, res) => {
             expect(res).to.have.status(404);
         });
 
         chai.request(server)
-        .put('/books/${bookId}')
+        .put('/books/999')
         .send({id: bookId, title: "Non-existing", author: "Non-existing"})
         .end((err, res) => {
             expect(res).to.have.status(404);
@@ -97,7 +94,7 @@ describe('Books', () => {
 
 
         chai.request(server)
-            .delete('/books/${bookId}')
+            .delete('/books/999')
             .end((err, res) => {
                 expect(res).to.have.status(404);
                 done();
